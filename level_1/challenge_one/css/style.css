@@ -1,0 +1,167 @@
+/* Start variables */
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+/* End variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Cream);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .card {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 600px;
+  background-color: var(--White);
+  transform: scale(0.9);
+}
+
+@media (max-width: 525px) {
+  .container .card {
+    height: 630px;
+    flex-direction: column;
+  }
+}
+
+.container .card .left {
+  flex: 1.2;
+  position: relative;
+}
+
+@media (max-width: 525px) {
+  .container .card .left {
+    flex: 0.7;
+  }
+}
+.container .card .right {
+  padding: 25px 15px 25px 30px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container .card .left::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/image-product-desktop.jpg") no-repeat center/cover;
+}
+
+@media (max-width: 525px) {
+  .container .card .left::after {
+    background: url("../img/image-product-mobile.jpg") no-repeat center/cover;
+  }
+}
+
+.card .right .head {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.card .right h1 {
+  font-family: "Fraunces", serif;
+  padding: 10px 30px 10px 0;
+  line-height: 0.9;
+  font-size: 30px;
+}
+.card .right p {
+  font-size: 14px;
+  color: var(--Dark-grayish-blue);
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+  line-height: 1.5;
+  padding-right: 20px;
+}
+
+.card .right .price {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.card .right .price .d-price {
+  font-size: 32px;
+  margin-right: 20px;
+  font-weight: 700;
+  color: var(--Dark-cyan);
+  font-family: "Fraunces", serif;
+}
+.card .right .price .o-price {
+  text-decoration: line-through;
+  font-size: 13px;
+  color: var(--Dark-grayish-blue);
+}
+.card .right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--Dark-cyan);
+  padding: 15px 0;
+  border-radius: 10px;
+  color: var(--White);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.card .right button:hover {
+  background-color: var(--Very-dark-blue);
+}
