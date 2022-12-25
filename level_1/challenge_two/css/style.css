@@ -1,0 +1,164 @@
+/* Start variables */
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: #22303b;
+  --Very-Dark-Blue: #1f2630;
+}
+/* End variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141519;
+  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .card {
+  border-radius: 15px;
+  padding: 30px;
+  width: 370px;
+  background-color: var(--Very-Dark-Blue);
+}
+
+.container .card.thanks {
+  display: none;
+  text-align: center;
+}
+
+.container .card.thanks .rate {
+  color: var(--Orange);
+  background-color: #262f38;
+  border-radius: 15px;
+  padding: 5px 20px;
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.container .card.thanks h4 {
+  color: white;
+  font-size: 25px;
+}
+
+.container .card .start {
+  border-radius: 50%;
+  background-color: var(--Dark-Blue);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .card .start img {
+  width: 15px;
+  height: 15px;
+}
+
+.container .card h1 {
+  color: var(--White);
+  font-size: 25px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+.container .card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--Medium-Grey);
+  padding: 15px 0;
+}
+
+.container .card .rating {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .card .rating span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #272e38;
+  color: var(--Light-Grey);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .card .rating span.selected {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+.container .card .rating span:not(.selected):hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.card button {
+  width: 100%;
+  margin-top: 30px;
+  background-color: var(--Orange);
+  padding: 12px 0;
+  border-radius: 20px;
+  color: var(--White);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
