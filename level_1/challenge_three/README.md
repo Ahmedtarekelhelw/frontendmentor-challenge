@@ -14,11 +14,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screencapture-127-0-0-1-5500-level-1-challenge-three-index-html-2022-12-26-18_00_39](https://user-images.githubusercontent.com/76922296/209566476-44fed4de-f8df-4144-bc2e-83c911443811.png)
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/qr-code-component-eBkc0OJpLh](https://www.frontendmentor.io/solutions/qr-code-component-eBkc0OJpLh)
 - Live Site URL: [https://level1-solution3.netlify.app/](https://level1-solution3.netlify.app/)
 
 ## My process
