@@ -114,13 +114,17 @@ body {
   padding: 15px 0;
 }
 
-.container .card .rating {
+.container .card form {
   padding-top: 10px;
+}
+
+.container .card form fieldset {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  border: none;
 }
-.container .card .rating span {
+
+.container .card form label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,12 +138,17 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.container .card .rating span.selected {
+
+.container .card form input {
+  display: none;
+}
+
+.container .card form input:checked + label {
   background-color: var(--Light-Grey);
   color: var(--White);
 }
 
-.container .card .rating span:not(.selected):hover {
+.container .card form label:hover {
   background-color: var(--Orange);
   color: var(--White);
 }

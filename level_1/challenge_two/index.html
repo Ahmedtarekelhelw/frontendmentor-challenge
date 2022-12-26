@@ -38,20 +38,31 @@
               Please let us know how we did with your support request. All
               feedback is appreciated to help us improve our offering!
             </p>
-            <div class="rating">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
-            </div>
-            <button>Submit</button>
+            <form class="rating">
+              <fieldset>
+                <input type="radio" id="1" name="rating" value="1" />
+                <label for="1">1</label>
+                <input type="radio" id="2" name="rating" value="2" />
+                <label for="2">2</label>
+                <input type="radio" id="3" name="rating" value="3" />
+                <label for="3">3</label>
+                <input type="radio" id="4" name="rating" value="4" />
+                <label for="4">4</label>
+                <input type="radio" id="5" name="rating" value="5" />
+                <label for="5">5</label>
+              </fieldset>
+              <button>Submit</button>
+            </form>
           </div>
           <!-- Rating state end -->
 
           <!-- Thank you state start -->
           <div class="card thanks">
-            <img src="./imgs/illustration-thank-you.svg" alt="thank-you" />
+            <img
+              src="./imgs/illustration-thank-you.svg"
+              alt=""
+              aria-hidden="“true"
+            />
             <div class="rate"></div>
             <h4>Thank you!</h4>
             <p>

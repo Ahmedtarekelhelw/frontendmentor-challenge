@@ -1,23 +1,19 @@
-const ratingNum = document.querySelectorAll(".rating span");
 let rateNum;
 
-ratingNum.forEach((span) =>
-  span.addEventListener("click", (e) => {
-    //remove selected class from all span
-    ratingNum.forEach((n) => n.classList.remove("selected"));
-
-    //add selected class to clicked span
-    e.target.classList.toggle("selected");
-
-    //set the rate the selected from span inside rateNum Variable
-    rateNum = e.target.textContent;
-  })
-);
-
 const cards = document.querySelectorAll(".card");
-const btn = document.querySelector("button");
-btn.onclick = () => {
-  //check if the user selected a number
+const form = document.querySelector("form");
+const ratingNum = document.querySelectorAll("form fieldset input");
+
+ratingNum.forEach((n) => {
+  n.addEventListener("change", (e) => {
+    rateNum = e.target.value;
+  });
+});
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+
+  // check if the user selected a number
   if (rateNum) {
     cards.forEach((card) => {
       if (card.classList.contains("thanks")) {
