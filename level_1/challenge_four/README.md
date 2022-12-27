@@ -21,11 +21,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screencapture-127-0-0-1-5500-level-1-challenge-four-index-html-2022-12-27-03_02_47](https://user-images.githubusercontent.com/76922296/209595391-c0bcae89-7368-4976-8772-83eb147bc033.png)
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/stats-preview-card-component-3gkJPTtZoM](https://www.frontendmentor.io/solutions/stats-preview-card-component-3gkJPTtZoM)
 - Live Site URL: [https://level1-solution4.netlify.app/](https://level1-solution4.netlify.app/)
 
 ## My process
