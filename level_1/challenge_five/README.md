@@ -22,11 +22,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screencapture-127-0-0-1-5500-level-1-challenge-five-index-html-2022-12-27-14_14_36](https://user-images.githubusercontent.com/76922296/209665854-bc982d32-03f4-4937-ab0d-78f82ffb2c07.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/nft-preview-card-component-9Vs4R3zRp3](https://www.frontendmentor.io/solutions/nft-preview-card-component-9Vs4R3zRp3)
 - Live Site URL: [https://level1-solution5.netlify.app](https://level1-solution5.netlify.app)
 
 ## My process
