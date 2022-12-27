@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* Start variables */
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Main-Bg: hsl(217, 54%, 11%);
+  --Card-Bg: hsl(216, 50%, 16%);
+  --Very-dark-blue: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+/* End variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Main-Bg);
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .card {
+  background-color: var(--Card-Bg);
+  padding: 20px;
+  border-radius: 10px;
+  width: 21em;
+}
+
+.container .card .image {
+  position: relative;
+  cursor: pointer;
+}
+.container .card .image .icon-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.container .card .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  transition: 0.3s;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+.container .card .image:hover::after {
+  background-color: var(--Cyan);
+}
+.container .card .image:hover .icon-view {
+  display: block;
+}
+
+.container .card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+}
+
+.container .card .info {
+  padding: 15px 0;
+}
+.container .card .info h1 {
+  color: var(--White);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .card .info h1 a:hover {
+  color: var(--Cyan);
+}
+.container .card .info p {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: var(--Soft-blue);
+  line-height: 1.5;
+}
+.container .card .info .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .card .info .price span:first-child {
+  color: var(--Cyan);
+}
+.container .card .info .price .time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--Soft-blue);
+}
+
+.container .card .footer {
+  border-top: 1px solid var(--Very-dark-blue);
+}
+.container .card .footer .avatar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+}
+.container .card .footer .avatar img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+.container .card .footer .avatar h2 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--Soft-blue);
+}
+
+.container .card .footer .avatar h2 a {
+  cursor: pointer;
+  color: var(--White);
+}
+.container .card .footer .avatar h2 a:hover {
+  color: var(--Cyan);
+}
