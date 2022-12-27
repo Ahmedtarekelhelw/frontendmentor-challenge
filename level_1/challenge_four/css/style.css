@@ -175,8 +175,9 @@ body {
   }
 }
 
-.container .card .left .stat div h3 {
+.container .card .left .stat div h2 {
   font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
 }
 .container .card .left .stat div span {
   color: var(--Slightly-transparent-stat);
