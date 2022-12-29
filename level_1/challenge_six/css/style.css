@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* Start variables */
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+/* End variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Pale-blue);
+
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.pattern-bg {
+  position: absolute;
+  bottom: 50%;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+}
+.pattern-bg.m {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pattern-bg.m {
+    display: block;
+  }
+  .pattern-bg.d {
+    display: none;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 25em;
+}
+
+.container .card .image {
+}
+.container .card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .card .info {
+  text-align: center;
+  padding: 20px;
+}
+.container .card h1 {
+  font-size: 1.6rem;
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.container .card p {
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 10px 0;
+  color: var(--Desaturated-blue);
+}
+.container .card .plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-pale-blue);
+  margin: 20px 0 30px 0;
+  border-radius: 15px;
+  padding: 20px;
+}
+.container .card .plan .price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container .card .plan .price img {
+  width: 50px;
+  height: 50px;
+}
+
+.container .card .plan .price div h2 {
+  color: var(--Dark-blue);
+  font-size: 17px;
+}
+.container .card .plan .price div span {
+  color: var(--Desaturated-blue);
+  font-size: 17px;
+}
+.container .card .plan a {
+  color: var(--Bright-blue);
+}
+.container .card .plan a:hover {
+  text-decoration: none;
+  color: var(--Bright-blue);
+}
+.container .card .info .btn-payment {
+  display: block;
+  margin: auto;
+  width: 100%;
+  border: none;
+  background-color: var(--Bright-blue);
+  padding: 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+  box-shadow: var(--Desaturated-blue) 0px 5px 15px;
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.container .card .info .btn-payment:hover {
+  background-color: #766cf1;
+}
+.container .card .info .btn-cancel {
+  display: block;
+  margin: auto;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 15px;
+  color: var(--Desaturated-blue);
+  font-weight: 900;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.container .card .info .btn-cancel:hover {
+  color: var(--Dark-blue);
+}
