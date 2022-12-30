@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/* Start variables */
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --White: hsl(0, 100%, 100%);
+}
+/* End variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .cards {
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    margin: 20px 0;
+  }
+  .container .cards {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.container .card {
+  color: var(--White);
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color);
+}
+
+.container .card h1 {
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  padding: 25px 0 30px;
+  font-size: 2.7rem;
+}
+
+.container .card p {
+  color: var(--Transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.7;
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+@media (max-width: 992px) {
+  .container .card h1 {
+    font-size: 2rem;
+  }
+
+  .container .card p {
+    font-size: 15px;
+  }
+}
+.container .card a {
+  border-radius: 25px;
+  padding: 13px;
+  cursor: pointer;
+  width: 60%;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--color);
+  background-color: var(--White);
+  transition: 0.3s;
+  text-align: center;
+  border: 2px solid var(--White);
+  margin-top: 20px;
+}
+
+.container .card a:hover {
+  background-color: transparent;
+  color: var(--White);
+}
