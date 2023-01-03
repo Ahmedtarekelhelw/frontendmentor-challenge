@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/* Start variables */
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+/* End variables */
+
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Main-Bg);
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@media (max-width: 992px) {
+  .container {
+    height: auto;
+    margin: 50px auto;
+  }
+}
+
+/* Start Background layout */
+
+.mobile {
+  position: absolute;
+  display: none;
+  z-index: -2;
+}
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.desktop {
+  position: absolute;
+  z-index: -2;
+}
+
+.bottom {
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+}
+
+@media (max-width: 992px) {
+  .mobile {
+    display: block;
+  }
+  .bottom {
+    width: 100%;
+    height: 50px;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+/* End Background layout */
+
+/* Start Layout */
+
+@media (max-width: 992px) {
+  .container .content {
+    text-align: center;
+  }
+}
+
+/* Start rating Section */
+
+.container .content .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  .container .content .info {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.container .content .info .text {
+  width: 35%;
+}
+
+@media (max-width: 992px) {
+  .container .content .info .text {
+    width: 100%;
+  }
+}
+.container .content .info .text h1 {
+  font-size: 55px;
+  font-size: 700;
+  color: var(--Very-Dark-Magenta);
+  margin-bottom: 20px;
+}
+.container .content .info .text p {
+  line-height: 1.5;
+  color: var(--Dark-Grayish-Magenta);
+}
+
+.container .content .info .rate-container {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .container .content .info .rate-container {
+    width: 100%;
+  }
+}
+.container .content .info .rate-container .rate {
+  display: flex;
+  color: var(--Very-Dark-Magenta);
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 10px;
+  padding: 15px 25px;
+  transform: var(--transform);
+}
+
+@media (max-width: 992px) {
+  .container .content .info .rate-container .rate {
+    transform: translateX(0);
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.container .content .info .rate-container .rate .star {
+  display: flex;
+}
+.container .content .info .rate-container .rate .star img {
+  margin-right: 10px;
+}
+.container .content .info .rate-container .rate h2 {
+  font-size: 15px;
+}
+
+/* End rating Section*/
+
+/* Start Comments Section */
+
+.container .content .comments {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .container .content .comments {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.container .content .comments .comment-card {
+  background-color: var(--Very-Dark-Magenta);
+  border-radius: 10px;
+  padding: 25px;
+  color: var(--White);
+}
+
+.container .content .comments .comment-card:last-child {
+  transform: translateY(30px);
+}
+.container .content .comments .comment-card:nth-child(2) {
+  transform: translateY(15px);
+}
+.container .content .comments .comment-card .profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.container .content .comments .comment-card .profile-info img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.container .content .comments .comment-card .profile-info .name h3 {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.container .content .comments .comment-card .profile-info .name span {
+  font-size: 16px;
+  color: var(--Soft-Pink);
+}
+.container .content .comments .comment-card p {
+  line-height: 1.5;
+}
+
+/* End Comments Section */
+/* End Layout */
