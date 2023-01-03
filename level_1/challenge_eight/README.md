@@ -21,9 +21,11 @@ Users should be able to:
 
 ### Screenshot
 
+![screencapture-level1-solution8-netlify-app-2023-01-03-14_02_11](https://user-images.githubusercontent.com/76922296/210353523-03577416-f574-4b30-861b-dc476b5802b7.png)
+
 ### Links
 
-- Solution URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/social-proof-section--FyPmUbKRP](https://www.frontendmentor.io/solutions/social-proof-section--FyPmUbKRP)
 
 - Live Site URL: [https://level1-solution8.netlify.app/](https://level1-solution8.netlify.app/)
 
